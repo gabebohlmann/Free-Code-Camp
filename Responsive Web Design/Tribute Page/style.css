@@ -1,0 +1,42 @@
+body {
+  background: #dbd6d6;
+  color: #474545;
+}
+h1 {
+  text-align: center;
+}
+#main {
+  text-align: center;
+  margin: 0 0 50px 0;
+  font-family: Roboto;
+}
+#img-div {
+  text-align: center;
+}
+img {
+  max-width: 75%;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: auto;
+  border: #474545 solid 10px;
+  border-radius: 5px;
+}
+h2 {
+  margin-top: 50px;
+}
+#tribute-info {
+  max-width: 600px;
+  text-align: left;
+  margin: 0px auto;
+}
+li {
+  padding: 5px;
+}
+q {
+  font-style: italic;
+}
+footer {
+  margin-top: 100px;
+  font-size: 18px;
+}
