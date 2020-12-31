@@ -1,1 +1,219 @@
+<script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+
+<nav id="navbar">
+  <header id="title">HTML Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#HTML_basics">HTML basics</a></li>
+    <li><a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li>
+    <li><a class="nav-link" href="#Nesting_elements">Nesting Elements</a></li>
+    <li><a class="nav-link" href="#Empty_elements">Empty Elements</a></li>
+    <li><a class="nav-link" href="#Anatomy_of_an_HTML_document">Anatomy of an HTML document</a></li>
+    <li><a class="nav-link" href="#Images">Images</a></li>
+    <li><a class="nav-link" href="#Marking_up_text">Marking up text</a></li>
+    <li><a class="nav-link" href="#Headings">Headings</a></li>
+    <li><a class="nav-link" href="#Paragraphs">Paragraphs</a></li>
+    <li><a class="nav-link" href="#Lists">Lists</a></li>
+    <li><a class="nav-link" href="#Links">Links</a></li>
+    <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header class="primary">Introduction</header>
+    <p>HTML (<strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables.</p>
+    <p>HTML  is not a programming language; it is a <em>markup language</em> that defines the structure of your content. HTML consists of a series of <strong>elements</strong>, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, and can make font bigger or smaller, and so on.  For example, take the following line of content:</p>
+    <p><code>My cat is very grumpy</code></p>
+    <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:
+
+    <p><code>&ltp>My cat is very grumpy&lt/p&gt</code></p>
+    <hr>
+  </section>
+  
+  <section id="HTML_basics" class="main-section">
+    <header class="primary">HTML basics</header>
+  </section>
+  
+  <section class="main-section" id="Anatomy_of_an_HTML_element">
+    <header class="secondary">Anatomy of an HTML element</header>
+    <p>The main parts of an element are:</p>
+    <ol>
+      <li><strong>The opening tag</strong>: This consists of the name of the element (in this case, p), wrapped in opening and closing <strong>angle brackets</strong>. This states where the element begins, or starts to take effect — in this case where the paragraph begins.</li>
+      <li><strong>The closing tag</strong>: This is the same as the opening tag, except that it includes a forward <em>slash</em> before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is one of the common beginner errors and can lead to strange results.</li>
+      <li><strong>The content</strong>: This is the content of the element, which in this case is just text.</li>
+      <li><strong>The element</strong>: The opening tag, the closing tag, and the content together comprise the element.</li>
+  </ol>
+      <p>Elements can also have attributes, which look like this:</p>
+      <div id="editor-note">
+        <code>&ltp <span >class="editor-note"&gt</span>My cat is very grumpy&lt/p&gt</code>
+        <div id="attribute-label">
+          <p>&ensp;&ensp;Attribute<br>
+             &ensp;&ensp;&ensp;&ensp;&ensp;|
+          
+          </p>
+        </div>
+      </div>
+      <p>Attributes contain extra information about the element that you don't want to appear in the actual content. Here, <span class="inline-code">class</span> is the attribute name, and <span class="inline-code">editor-note</span> is the attribute value. The <span class="inline-code">class</span> attribute allows you to give the element an identifier that can be later used to target the element with style information and other things.</p>
+  <p>An attribute should always have:</p>
+  <ol>
+    <li>A space between it and the element name (or the previous attribute, if the element already has one or more attributes).</li>
+    <li>The attribute name, followed by an equals sign.</li>
+    <li>Opening and closing quote marks wrapped around the attribute value. </li>
+    </ol>
+  </section>
+  
+  <section class="main-section" id="Nesting_elements">
+    <header class="secondary">Nesting elements</header>
+    <p>You can put elements inside other elements too — this is called <strong>nesting</strong>. If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word "very" in a <span class="tag">&ltstrong&gt</span> element, which means that the word is to be strongly emphasized:</p>
+    <p><code>&ltp&gtMy cat is &ltstrong&gtvery&lt/strong&gt grumpy.&lt/p&gt</code></p>
+    <p>You do however need to make sure that your elements are properly nested: in the example above we opened the &ltp&gt element first, then the &ltstrong&gt element, therefore we have to close the &ltstrong> element first, then the &ltp&gt. The following is incorrect:</p>
+    <p><code>&ltp&gtMy cat is &ltstrong&gtvery grumpy.&lt/p&gt&lt/strong&gt</code></p>
+    <p>The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap like above, then your web browser will try to make a best guess at what you were trying to say, which can lead to unexpected results. So don't do it!</p>
+    </section>
+    
+    <section class="main-section" id="Empty_elements">
+      <header class="secondary">Empty elements</header>
+      <p>Some elements have no content, and are called <strong>empty elements</strong>. Take the <span>&ltimg&gt</span> element we already have in our HTML:</p>
+      <div class="code"><code>&ltimg src="images/firefox-icon.png" alt="My test image"&gt</code></div>
+      <p></p>
+    </section>
+  
+    <section class="main-section" id="Anatomy_of_an_HTML_document">
+      <header class="secondary">Anatomy of an HTML document</header>
+      <p>That wraps up the basics of individual HTML elements, but they aren't very useful on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our index.html example (which we first met in the Dealing with files article):</p>
+      <div class="code">&lt!DOCTYPE html&gt<br>
+&lthtml&gt<br>
+  &nbsp;&nbsp;&lthead&gt<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&ltmeta charset="utf-8"&gt<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lttitle&gtMy test page&lt/title&gt<br>
+  &nbsp;&nbsp;&lt/head&gt<br>
+  &nbsp;&nbsp;&ltbody&gt<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&ltimg src="images/firefox-icon.png" alt="My test image"&gt<br>
+  &nbsp;&nbsp;&lt/body&gt<br>
+        &lt/html&gt</div>
+      <p>Here we have</p>
+      <ul>
+        <li><span class="inline-code">&lt!DOCTYPE html&gt</span> — the doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days no one really cares about them, and they are really just a historical artefact that needs to be included for everything to work right. For now, that's all you need to know.</li>
+        <li>
+          <span class="inline-code">&lthtml&gt&lt/html&gt</span> — the <span class="tag">&lthtml&gt</span> element. This element wraps all the content on the entire page, and is sometimes known as the root element.
+        </li>
+        <li>
+          <span class="inline-code">&lthead&gt&lt/head&gt</span> — the <span class="tag">&lthead&gt</span> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
+        </li>
+        <li>
+          <span class="inline-code">&ltbody&gt&lt/body&gt</span> — the <span class="tag">&ltbody&gt</span> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
+        </li>
+        <li>
+          <span class="inline-code">&ltmeta charset="utf-8"&gt</span> — this element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of human written languages. Essentially it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on. 
+        </li>
+        <li>
+          <span class="inline-code">&lttitle&gt&lt/title&gt</span> — the <span class="tag">&lttitle&gt</span> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favourite it.
+        </li>
+      </ul>
+      <hr>
+    </section>
+  
+    <section class="main-section" id="Images">
+      <header class="primary">Images</header>
+      <p>Let's turn our attention to the <span class="tag">&ltimg&gt</span> element again:</p>
+      <p><code>&ltimg src="images/firefox-icon.png" alt="My test image"&gt</code></p>
+      <p>As we said before, it embeds an image into our page in the position it appears. It does this via the <span class="inline-code">src</span> (source) attribute, which contains the path to our image file.</p>
+      <p>We have also included an <span class="inline-code">alt<span> (alternative) attribute. In this attribute, you specify descriptive text for users who cannot see the image, possibly because:</p>
+        <ol>
+          <li>They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.</li>
+          <li>Something has gone wrong causing the image to not display. For example, try deliberately changing the path inside your <span class="inline-code">src</span> attribute to make it incorrect. If you save and reload the page, you should see something like this in place of the image:</li>
+        </ol>
+        <img id="test" src="https://mdn.mozillademos.org/files/9349/alt-text-example.png" alt="Test Image">
+        <p>The key words about alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."</p>
+        <p>Try coming up with some better alt text for your image now</p>
+        <p class="note"><span class="doc"><i class="far fa-file"></i></span><strong>Note:</strong> Find out more about accessibility at <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN's Accessibility landing page</a>.</p>
+        <hr>
+      </section>
+      
+      <section class="main-section" id="Marking_up_text">
+        <header class="primary">Marking up text</header>
+        <p>This section will cover some of the basic HTML elements you'll use for marking up text.</p>
+        </section>
+          
+        <section class="main-section" id="Headings">
+          <header class="secondary" >Headings</header>
+          <p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings — of your content. In the same way that a book has a main title, chapter titles and subtitles, an HTML document can too. HTML contains six heading levels, <span class="tag">&lth1&gt</span>–<span class="tag">&lth6&gt</span> although you'll commonly only use 3–4 at most:</p>
+          <div class="code">&lth1>My main title&lt/h1&gt<br>
+  &lth2&gtMy top level heading&lt/h2&gt<br>
+  &lth3&gtMy subheading&lt/h3&gt<br>
+  &lth4&gtMy sub-subheading&lt/h4&gt</div>
+          <p>Now try adding a suitable title to your HTML page just above your <span class="tag">&ltimg&gt</span> element.</p>
+        </section> 
+        
+        <section class="main-section" id="Paragraphs">
+          <header class="secondary">Paragraphs</header>
+          <p>As explained above, <span>&ltp&gt</span> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:</p>
+          <p><code>&emsp;&ltp&gtThis is a single paragraph&lt/p&gt</code></p>
+          <p>Add your sample text (you should have it from <a  class="link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What should your website look like?</a>) into one or a few paragraphs, placed directly below your <span>&ltimg&gt</span> element.</p>
+        </section>
+        
+        
+        <section class="main-section" id="Lists"> 
+        <header class="secondary">Lists</header>
+          <p>A lot of the web's content is lists, and HTML has special elements for these. Marking up lists always consist of at least two elements. The most common list types are ordered and unordered lists:</p>
+          <ol>
+            <li><strong>Unordered lists</strong> are for lists where the order of the items doesn't matter, like a shopping list. These are wrapped in a <span class="tag">&ltul&gt</span> element.</li>
+            <li><strong>Ordered lists</strong> are for lists where the order of the items does matter, like a recipe. These are wrapped in an <span class="tag">&ltol&gt</span> element.</li>
+          </ol>
+          <p>Each item inside the lists is put inside an <span>&ltli&gt</span> (list item) element.</p>
+          <p>For example, if we wanted to turn the part of the following paragraph fragment into a list:</p>
+          <div class="code">&ltp&gtAt Mozilla, we’re a global community of technologists, thinkers, and builders working together ... &lt/p&gt</div>
+          <p>We could modify the markup to this:</p>
+          <div class="code">&ltp&gtAt Mozilla, we’re a global community of&lt/p&gt<br><br>
+
+  &ltul&gt<br> 
+    &emsp;&ltli>technologists&lt/li&gt<br>
+    &emsp;&ltli>thinkers&lt/li&gt<br>
+    &emsp;&ltli>builders&lt/li&gt<br>
+  &lt/ul><br><br>
+
+  &ltp>working together ... &lt/p&gt</div>
+          <p>Try adding an ordered or unordered list to your example page.</>
+         <hr>
+      </section>
+      
+      <section class="main-section" id="Links">
+        <header class="primary">Links</header>
+        <p>Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — <span>&lta&gt</span> — the "a" being short for "anchor". To make text within your paragraph into a link, follow these steps:</p>
+        <ol>
+          <li>Choose some text. We chose the text "Mozilla Manifesto".</li>
+          <li><p>Wrap the text in an <span>&lta&gt</span> element, like so:</p>
+          <div class="code">&lta&gtMozilla Manifesto&lt/a&gt</div></li>
+          <li><p>Give the &lta&gt element an <span class="inline-code">href</span> attribute, like so:</p>
+            <code>&lta href="">Mozilla Manifesto&lt/a&gt</code>
+          </li>
+          <li><p>Fill in the value of this attribute with the web address that you want the link to link to:</p>
+            <div class="code">&lta href="https://www.mozilla.org/en-US/about/manifesto/"&gtMozilla Manifesto&lt/a&gt</div>
+          </li>
+        </ol>
+        <p>You might get unexpected results if you omit the <span class="inline-code">https://</span> or <span class="inline-code">http://</span> part, called the <em>protocol</em>, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.</p>
+        <p class="note"><span class="inline-code">href</span> might appear like a rather obscure choice for an attribute name at first. If you are having trouble remembering it, remember that it stands for <em><strong>h</strong>ypertext <strong>ref</strong>erence</em>.</p>
+<p>Add a link to your page now, if you haven't already done so.</p>
+        <hr>
+      </section>
+      
+       <section class="main-section" id="Conclusion">
+        <header class="primary">Conclusion</header>
+         <p>If you have followed all the instructions in this article, you should end up with a page that looks like the one below (you can also <span class="link">view it here</span>):</p>
+         <img src="https://mdn.mozillademos.org/files/9351/finished-test-page-small.png" alt="website demo">
+         <p>If you get stuck, you can always compare your work with our <a class="link" href="https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html"></a>finished example code</span> on GitHub.</p>
+  <p>Here, we have only really scratched the surface of HTML. To find out more, go to our <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML Learning topic</a>.</p>
+
+<section class="main-section" id="Reference">
+        <header class="primary">Reference</header>
+    <ul>
+      <li>All the documentation in this page is taken from <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN</a></li>
+  </ul>
+</section>
+  
+</main>
