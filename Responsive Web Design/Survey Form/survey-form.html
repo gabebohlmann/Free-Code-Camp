@@ -1,1 +1,66 @@
+<script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<h1 id="title">Personal Information Form</h1>
+<div id="box">
+  <p id="description">Give us your personal data so we can profit off it</p>
+  <form id="survey-form">
+    <div>
+      <label for="name" id="name-label" class="labels">* Name:</label> 
+      <input type="text" id="name" placeholder="Enter your name" required class="answers">
+    </div>
+      
+    <div>
+      <label for="email" id="email-label" class="labels">* Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required class="answers">
+    </div>
+    
+    <div>
+      <label for="age" id="number-label" class="labels">* Age:</label>
+      <input type="number" id="number" min="1" max="100" placeholder="Enter your age" required class="answers">
+    </div>
+    
+    <div>
+      <label for="dropdown" class="labels">What kind of developer are you?</label>
+      <select id="dropdown">
+        <option disabled selected value>Select an option</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="fullstack">Fullstack</option>
+      </select>
+    </div>
+  
+    <div> 
+      <label for="js"></label>
+      <label for="preference" class="labels float">What is your preffered javscript framework?</label>
+      <ul style="list-style: none;" class="answers">
+        <li><input type="radio" name="radio-button" value="1" >Angular</li>
+        <li><input type="radio" name="radio-button" value="2">React</li>
+        <li><input type="radio" name="radio-button" value="3">Vue</li>
+      </ul>
+    </div>
+      
+    <div>
+      <label for="skills" class="labels float">What skills do you have as a developer? (Check all that apply)</label>
+      <ul style="list-style: none" class="answers">
+        <li><input type="checkbox" value="1">HTML</li>
+        <li><input type="checkbox" value="2">CSS</li>
+        <li><input type="checkbox" value="3">Javascript</li>
+        <li><input type="checkbox" value="4">JQuery</li>
+        <li><input type="checkbox" value="5">PHP</li>
+        <li><input type="checkbox" value="6">NodeJS</li>
+        <li><input type="checkbox" value="7">MySQL</li>
+      </ul>
+    </div>
+      <div>
+        <label for="describe" class="labels float">Describe yourself:</label>
+        <textarea id="describe" style="height:50px;resize;vertical" placeholder="Describe yourself here....">
+        </textarea>
+      </div>
+      
+      <div>
+        <label for="submit"></label>
+        <button id="submit">Submit</button>
+  </form>
+</div>
 
